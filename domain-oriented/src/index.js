@@ -1,15 +1,15 @@
-const { ApolloServer, gql } = require("apollo-server");
-const books = require("./books");
+import { ApolloServer, gql } from "apollo-server";
+import { typeDef as _typeDef, resolvers } from "./books";
 
 const typeDef = gql`
-  type Query
+    type Query
 `;
 
 const server = new ApolloServer({
-  typeDefs: [typeDef, books.typeDef],
-  resolvers: [books.resolvers],
+    typeDefs: [typeDef, _typeDef],
+    resolvers
 });
 
 server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
+    console.log(`🚀  Server ready at ${url}`);
 });

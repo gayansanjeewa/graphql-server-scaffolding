@@ -1,11 +1,11 @@
-const { Book } = require("./Book");
+import Book from "./Book";
 
 const resolvers = {
-  Query: {
-    books: () => Book.all(),
-  },
+    Query: {
+        books: () => Book.all()
+    }
 };
 
-module.exports = {
-  resolvers,
-}
+export default {
+    resolvers
+};

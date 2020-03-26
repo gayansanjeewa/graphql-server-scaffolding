@@ -1,11 +1,6 @@
-const { data } = require("./data");
-const { Book } = require("./Book");
-const { resolvers } = require("./resolvers");
-const { typeDef } = require("./typeDef");
+import data from "./data";
+import Book from "./Book";
+import resolvers from "./resolvers";
+import typeDef from "./typeDef";
 
-module.exports = {
-  data,
-  Book,
-  resolvers,
-  typeDef,
-};
+export { data, Book, resolvers, typeDef };

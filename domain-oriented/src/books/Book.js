@@ -1,11 +1,11 @@
-const { books } = require("./data");
+import { books } from "./data";
 
 class Book {
-  static all() {
-    return books;
-  }
+    static all() {
+        return books;
+    }
 }
 
-module.exports = {
-  Book,
+export default {
+    Book
 };
